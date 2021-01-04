@@ -6,34 +6,44 @@ ALMA2 = []
 XWRA = []
 SYN = []
 bathmologia_germanias = 0
-KALYTERH_EPIDOSH = [] #atoma poy eixan megalyterh bathmologia sto 2o alma
+megalyterh_bathmologia = 0
+thesh = -1
+plhthos = 0 #Πλήθος ατόμων με καλήτερη επίδοση στο 2ο άλμα
 
-for i in range(80):
-    eponymo = raw_input("Επίθετο: ")
-    onoma = raw_input("Όνομα: ")
-    alma1 = input("Βαθμολογία πρώτου άλματος: "))
-    alma2 = input("Βαθμολογία δεύτερου άλματος: "))
-    xwra = raw_input("Χώρα: ")
+#Δ1 - Δ2
+for i in range(80): 
+    eponymo = input("Επίθετο: ")
+    onoma = input("Όνομα: ")
+    alma1 = int(input("Βαθμολογία πρώτου άλματος: "))
+    alma2 = int(input("Βαθμολογία δεύτερου άλματος: "))
+    xwra = input("Χώρα: ")
 
+#Δ3
     EP.append(eponymo)
     ON.append(onoma)
     ALMA1.append(alma1)
     ALMA2.append(alma2)
     XWRA.append(xwra)
 
+#Δ4
     synolo = alma1 + alma2 
     SYN.append(synolo)
 
+#Δ5
     if xwra == "ΓΕΡΜΑΝΙΑ":
         bathmologia_germanias = bathmologia_germanias + synolo
-    
-    if alma2 > alma1:
-        KALYTERH_EPIDOSH.append(eponymo)
+        
+   
+#Δ6        
+    if megalyterh_bathmologia < synolo:
+        megalyterh_bathmologia = synolo
+        thesh = i
 
-megalyterh_bathmologia = max(SYN)
-megalyterh_bathmologia_index = SYN.index(megalyterh_bathmologia)
+#Δ7
+    if alma2 > alma1:
+        plhthos += 1
 
 print(EP, ON, ALMA1, ALMA2, XWRA, SYN)
 print("Συνολική βαθμολογία της Γερμανίας: ", bathmologia_germanias)
-print("Αθλητής με την μεγαλύτερη βαθμολογία: ", EP[megalyterh_bathmologia_index])
-print("Νούμερο αθλητών με καλύτερη επίδοση στο 2ο άλμα: ", len(KALYTERH_EPIDOSH))
+print("Αθλητής με την μεγαλύτερη βαθμολογία: ", EP[thesh])
+print("Νούμερο αθλητών με καλύτερη επίδοση στο 2ο άλμα: ", plhthos)
