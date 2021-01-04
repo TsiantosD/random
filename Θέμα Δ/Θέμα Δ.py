@@ -8,7 +8,7 @@ SYN = []
 bathmologia_germanias = 0
 KALYTERH_EPIDOSH = [] #atoma poy eixan megalyterh bathmologia sto 2o alma
 
-for i in range(3):
+for i in range(80):
     eponymo = input("Επίθετο: ")
     onoma = input("Όνομα: ")
     alma1 = int(input("Βαθμολογία πρώτου άλματος: "))
