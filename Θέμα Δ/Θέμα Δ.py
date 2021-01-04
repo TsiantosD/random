@@ -9,11 +9,11 @@ bathmologia_germanias = 0
 KALYTERH_EPIDOSH = [] #atoma poy eixan megalyterh bathmologia sto 2o alma
 
 for i in range(80):
-    eponymo = input("Επίθετο: ")
-    onoma = input("Όνομα: ")
-    alma1 = int(input("Βαθμολογία πρώτου άλματος: "))
-    alma2 = int(input("Βαθμολογία δεύτερου άλματος: "))
-    xwra = input("Χώρα: ")
+    eponymo = raw_input("Επίθετο: ")
+    onoma = raw_input("Όνομα: ")
+    alma1 = input("Βαθμολογία πρώτου άλματος: "))
+    alma2 = input("Βαθμολογία δεύτερου άλματος: "))
+    xwra = raw_input("Χώρα: ")
 
     EP.append(eponymo)
     ON.append(onoma)
